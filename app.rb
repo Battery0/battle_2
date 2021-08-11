@@ -1,14 +1,13 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 
-
 class Battle < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
 
   get '/' do
-    'Hello Battle!'
+    'Testing infrastrucutre working!'
   end
 
   # start the server if ruby file executed directly
