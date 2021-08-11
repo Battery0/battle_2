@@ -6,8 +6,19 @@ class Battle < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  # get '/' do
+  #   'Testing infrastrucutre working!'
+  # end
+
   get '/' do
-    'Testing infrastrucutre working!'
+    erb(:index)
+  end
+
+  post '/names' do
+    @name1 = params[:name1]
+    @name2 = params[:name2]
+    p params
+    erb(:play)
   end
 
   # start the server if ruby file executed directly
